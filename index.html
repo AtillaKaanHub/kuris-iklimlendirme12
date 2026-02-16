@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuriş İklimlendirme | Ferah Bir Yaşam İçin</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* --- EKSİK OLAN ANİMASYONLARI EKLEDİM --- */
+        
+        /* 1. Markalar Şeridi İçin Kayan Yazı Animasyonu */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+
+        /* 2. Hero Görseli İçin Yüzme Efekti */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* --- GENEL AYARLAR --- */
+        :root {
+            --primary-blue: #0056b3;
+            --accent-blue: #00a8cc;
+            --gradient-bg: linear-gradient(135deg, #0056b3 0%, #00a8cc 100%);
+            --white: #ffffff;
+            --bg-light: #f0f8ff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Header Özelleştirmesi */
+        header {
+            background-color: rgba(255, 255, 255, 0.95); /* Hafif şeffaflık modern durur */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .custom-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .btn-header {
+            background: var(--gradient-bg);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Hizmetler ve Diğer Bölümler */
+        .section { padding: 80px 0; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 10px; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-bottom: 4px solid var(--accent-blue);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i { font-size: 3rem; color: var(--accent-blue); margin-bottom: 20px; }
+        
+        .bg-blue { background-color: var(--bg-light); }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .about-image img { width: 100%; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        
+        /* Mobil */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+        
+
+        @keyframes nefes-alma {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); } /* %5 Büyüme */
+            100% { transform: scale(1); }
+        }
+
+        .nefes-efekti {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nefes-efekti:hover {
+            animation: nefes-alma 2s infinite ease-in-out; 
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="custom-container">
+            <nav>
+              <a href="#" class="logo">
+    <img src="logo.jpg" alt="Kuriş İklimlendirme" class="h-20 w-auto">
+</a>
+    
+</a>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#">Ana Sayfa</a></li>
+                   <li><a href="hizmetler.html">Hizmetler</a></li>
+                  <li><a href="kurumsal.html">Kurumsal</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                </ul>
+                <a href="#footer" class="btn-header">Teklif Al</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="relative w-full min-h-screen flex items-center pt-28 pb-12 bg-gradient-to-br from-slate-50 to-blue-100 overflow-hidden">
+    
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl"></div>
+
+    <div class="custom-container mx-auto px-4 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            
+            <div class="text-center md:text-left space-y-6">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-2 border border-blue-200">
+                    <i class="fa-solid fa-star text-yellow-500 mr-1"></i> %100 Müşteri Memnuniyeti
+                </span>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                    Mevsimleri <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Kontrol Altına Alın</span>
+                </h1>
+                
+                <p class="text-lg text-slate-600 md:pr-10">
+                    Eviniz ve iş yeriniz için en verimli ısıtma ve soğutma çözümleri. Konforunuzu profesyonel ellere bırakın.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+                    <a href="#footer" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-blue-500/30 transition transform hover:-translate-y-1">
+                        Hemen Teklif Al
+                    </a>
+                    <a href="tel:+905550000000" class="px-8 py-4 bg-white hover:bg-gray-50 text-slate-800 font-bold rounded-full shadow-md border border-gray-200 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone text-blue-600"></i> Bizi Arayın
+                    </a>
+                </div>
+
+                <div class="flex items-center justify-center md:justify-start gap-6 pt-6 text-sm text-slate-500 font-medium">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-blue-500 text-lg"></i> 2 Yıl Garanti
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-bolt text-yellow-500 text-lg"></i> Enerji Tasarrufu
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group animate-float">
+                <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="hero-klima.jpg" 
+                         alt="Kuriş İklimlendirme Klima Montajı" 
+                         class="w-full h-full object-cover">
+                         
+                    <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-white/50 hidden sm:block">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                <i class="fa-solid fa-leaf text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-semibold uppercase">Doğa Dostu</p>
+                                <p class="text-sm font-bold text-gray-900">A++ Enerji Verimliliği</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </section>
+
+  
+
+    <section id="services" class="section">
+        <div class="custom-container">
+            <div class="section-title">
+                <h2>Hizmetlerimiz</h2>
+                <p>Profesyonel ekibimizle sunduğumuz iklimlendirme çözümleri.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-wind"></i>
+                    <h3>Klima Satış & Montaj</h3>
+                    <p>En yeni teknolojiye sahip klimaların keşfi ve profesyonel montaj hizmetleri.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-tools"></i>
+                    <h3>Bakım & Onarım</h3>
+                    <p>Cihazlarınızın ömrünü uzatmak ve verimini artırmak için periyodik bakım.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-building"></i>
+                    <h3>VRF Sistemleri</h3>
+                    <p>Büyük projeler, plazalar ve oteller için merkezi iklimlendirme çözümleri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section bg-blue">
+        <div class="custom-container">
+            <div class="about-content">
+                <div class="about-image rounded-2xl overflow-hidden border-4 border-white shadow-2xl" style="flex:1;">
+    <img src="dükkan.jpg" alt="dükkan" class="nefes-efekti w-full h-full object-cover">
+</div>
+                <div class="about-text" style="flex:1;">
+                    <h2 style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 15px;">Kuriş İklimlendirme Hakkında</h2>
+                    <p>Yılların verdiği tecrübe ile sektörde güvenin adresi olan firmamız, müşteri memnuniyetini her zaman ön planda tutmaktadır.</p>
+                    <br>
+                    <ul style="list-style: none;">
+                        <li><i class="fa-solid fa-check" style="color:var(--primary-blue)"></i> Sertifikalı Uzman Kadro</li>
+                        <li><i class="fa-solid fa-check" style="color:var(--primary-blue)"></i> Orijinal Yedek Parça</li>
+                        <li><i class="fa-solid fa-check" style="color:var(--primary-blue)"></i> 7/24 Teknik Destek</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-10 pt-8 border-t border-gray-200 w-full">
+    <h3 class="text-center font-bold text-gray-800 mb-6 text-xl">Müşterilerimiz Bizi Öneriyor</h3>
+    
+    <div class="mt-12 pt-8 border-t border-gray-200 w-full" id="musteri-yorumlari">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 h-fit">
+            <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                <i class="fa-regular fa-pen-to-square text-blue-600"></i>
+                Siz de Yorum Yapın
+            </h3>
+            
+            <form id="miniYorumFormu" onsubmit="yorumEkleMini(event)">
+                <div class="mb-3">
+                    <input type="text" id="miniAd" required 
+                           class="w-full px-4 py-2 rounded-lg border border-blue-200 focus:outline-none focus:border-blue-500 text-sm" 
+                           placeholder="Adınız Soyadınız">
+                </div>
+
+                <div class="mb-3">
+                    <select id="miniPuan" class="w-full px-4 py-2 rounded-lg border border-blue-200 focus:outline-none focus:border-blue-500 text-sm text-gray-600">
+                        <option value="5">⭐⭐⭐⭐⭐ - Mükemmel</option>
+                        <option value="4">⭐⭐⭐⭐ - Çok İyi</option>
+                        <option value="3">⭐⭐⭐ - Orta</option>
+                        <option value="2">⭐⭐ - Geliştirilmeli</option>
+                        <option value="1">⭐ - Kötü</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <textarea id="miniMesaj" required rows="3" 
+                              class="w-full px-4 py-2 rounded-lg border border-blue-200 focus:outline-none focus:border-blue-500 text-sm" 
+                              placeholder="Deneyiminizi buraya yazın..."></textarea>
+                </div>
+
+                <button type="submit" 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition duration-300 text-sm shadow-md">
+                    YORUMU GÖNDER
+                </button>
+            </form>
+        </div>
+
+        <div class="bg-white p-2">
+            <h3 class="text-xl font-bold text-gray-800 mb-4 px-2">Son Değerlendirmeler</h3>
+            
+            <div id="miniYorumListesi" class="space-y-4 overflow-y-auto max-h-[300px] pr-2">
+                
+                <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex gap-3">
+                    <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 font-bold text-lg flex-shrink-0">
+                        A
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center w-full">
+                            <h4 class="font-bold text-sm text-gray-900">Ahmet Yılmaz</h4>
+                            <div class="text-yellow-400 text-[10px]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-xs mt-1">Hızlı servis ve güler yüzlü ekip. Teşekkürler.</p>
+                    </div>
+                </div>
+
+                 <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex gap-3">
+                    <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 font-bold text-lg flex-shrink-0">
+                        M
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center w-full">
+                            <h4 class="font-bold text-sm text-gray-900">Merve Demir</h4>
+                            <div class="text-yellow-400 text-[10px]">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-xs mt-1">Klima bakımından çok memnun kaldım.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+    </section>
+
+  <footer id="footer" class="relative bg-gradient-to-b from-[#0b1220] to-black text-gray-300 pt-20 pb-10 overflow-hidden">
+
+  <!-- Arka plan efektleri -->
+  <div class="absolute top-0 left-1/3 w-96 h-96 bg-blue-600/20 blur-[120px] rounded-full pointer-events-none"></div>
+  <div class="absolute bottom-0 right-1/3 w-96 h-96 bg-cyan-600/20 blur-[120px] rounded-full pointer-events-none"></div>
+
+  <div class="relative max-w-[1280px] mx-auto px-6">
+
+    <!-- Üst grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+
+      <!-- Logo + açıklama -->
+     <div class="lg:col-span-2">
+    <div class="flex items-center gap-3">
+        
+        <img src="sembol.png.png" alt="Kuriş Logo" class="w-16 h-16 object-contain bg-white rounded-lg p-1">
+        <span class="text-2xl font-bold text-white tracking-wide">KURİŞ</span>
+    </div>
+
+        <p class="mt-4 text-gray-400 max-w-md">
+          İklimlendirme sektöründe güven ve kalitenin adresi. Eviniz ve iş yeriniz için modern, enerji tasarruflu ve çevre dostu çözümler.
+        </p>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <a href="https://www.google.com/maps/search/?api=1&query=Hürriyet,+İsmet+İnönü+Blv.+no:111/A,+33120+Yenişehir/Mersin"
+             target="_blank"
+             class="flex items-center gap-3 hover:text-blue-400 transition">
+            <i class="fa-solid fa-location-dot text-blue-500"></i>
+            Hürriyet, İsmet İnönü Blv. no:111/A, Yenişehir/Mersin
+          </a>
+
+          <p class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-blue-500"></i>
+            +90 501 030 3361
+          </p>
+
+          <p class="flex items-center gap-3">
+            <i class="fa-solid fa-envelope text-blue-500"></i>
+            info@kurisiklim.com
+          </p>
+        </div>
+      </div>
+
+      <!-- Hizmetler -->
+      <div>
+        <h3 class="text-white font-bold mb-4 text-lg border-b border-gray-800 pb-2 inline-block">
+          <a href="hizmetler.html" class="hover:text-blue-400 transition">
+            Hizmetler
+          </a>
+        </h3>
+
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li class="cursor-default">Split Klima</li>
+          <li class="cursor-default">VRF Sistemleri</li>
+          <li class="cursor-default">Kombi Bakım</li>
+        </ul>
+      </div>
+
+      <!-- Kurumsal -->
+      <div>
+        <h3 class="text-white font-bold mb-4 text-lg border-b border-gray-800 pb-2 inline-block">
+          <a href="kurumsal.html" class="hover:text-blue-400 transition">
+            Kurumsal
+          </a>
+        </h3>
+
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li class="cursor-default">Hakkımızda</li>
+          <li class="cursor-default">Belgelerimiz</li>
+        </ul>
+      </div>
+
+      <!-- Çalışma saatleri -->
+      <div>
+        <h3 class="text-white font-bold mb-4 text-lg border-b border-gray-800 pb-2 inline-block">
+          Çalışma Saatleri
+        </h3>
+
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li class="flex justify-between"><span>Pzt - Cuma:</span><span class="text-white">08:00 - 19:00</span></li>
+          <li class="flex justify-between"><span>Cmtesi:</span><span class="text-white">08:00 - 19:00</span></li>
+          <li class="flex justify-between"><span>Pazar:</span><span class="text-red-400">Kapalı</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Alt kısım -->
+    <div class="mt-16 border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <p class="text-sm text-gray-500">
+        © 2024 Kuriş İklimlendirme. Tüm hakları saklıdır.
+      </p>
+
+      <div class="flex gap-4">
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-800 hover:bg-blue-600 transition text-white">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-800 hover:bg-pink-600 transition text-white">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/905010303361" target="_blank" class="fixed bottom-6 right-6 z-50 group">
+    <div class="absolute bottom-16 right-0 w-48 bg-white p-3 rounded-xl shadow-xl border border-gray-100 hidden group-hover:block transition-all duration-300">
+        <p class="text-sm text-gray-600">Merhaba! 👋 <br> Size nasıl yardımcı olabiliriz?</p>
+    </div>
+
+    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition duration-300 animate-bounce-slow">
+        <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+    </div>
+    
+    <span class="absolute top-0 right-0 w-16 h-16 bg-green-500 rounded-full opacity-75 animate-ping -z-10"></span>
+</a>
+
+<style>
+    /* Dahaa yavaş zıplama efekti */
+    @keyframes bounce-slow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+    .animate-bounce-slow {
+        animation: bounce-slow 2s infinite;
+    }
+</style>
+
+</body>
+</html>
