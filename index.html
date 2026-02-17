@@ -184,7 +184,7 @@
                   <li><a href="kurumsal.html">Kurumsal</a></li>
                     <li><a href="iletisim.html">İletişim</a></li>
                 </ul>
-                <a href="#footer" class="btn-header">Teklif Al</a>
+                <a href="teklif-al.html" class="btn-header">Teklif Al</a>
             </nav>
         </div>
     </header>
@@ -212,7 +212,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                    <a href="#footer" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-blue-500/30 transition transform hover:-translate-y-1">
+                    <a href="teklif-al.html" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-blue-500/30 transition transform hover:-translate-y-1">
                         Hemen Teklif Al
                     </a>
                     <a href="tel:+905550000000" class="px-8 py-4 bg-white hover:bg-gray-50 text-slate-800 font-bold rounded-full shadow-md border border-gray-200 transition flex items-center justify-center gap-2">
@@ -258,135 +258,158 @@
 
   
 
-    <section id="services" class="section">
-        <div class="custom-container">
-            <div class="section-title">
-                <h2>Hizmetlerimiz</h2>
-                <p>Profesyonel ekibimizle sunduğumuz iklimlendirme çözümleri.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fa-solid fa-wind"></i>
-                    <h3>Klima Satış & Montaj</h3>
-                    <p>En yeni teknolojiye sahip klimaların keşfi ve profesyonel montaj hizmetleri.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-tools"></i>
-                    <h3>Bakım & Onarım</h3>
-                    <p>Cihazlarınızın ömrünü uzatmak ve verimini artırmak için periyodik bakım.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-building"></i>
-                    <h3>VRF Sistemleri</h3>
-                    <p>Büyük projeler, plazalar ve oteller için merkezi iklimlendirme çözümleri.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="section bg-blue">
-        <div class="custom-container">
-            <div class="about-content">
-                <div class="about-image rounded-2xl overflow-hidden border-4 border-white shadow-2xl" style="flex:1;">
-    <img src="dükkan.jpg" alt="dükkan" class="nefes-efekti w-full h-full object-cover">
-</div>
-                <div class="about-text" style="flex:1;">
-                    <h2 style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 15px;">Kuriş İklimlendirme Hakkında</h2>
-                    <p>Yılların verdiği tecrübe ile sektörde güvenin adresi olan firmamız, müşteri memnuniyetini her zaman ön planda tutmaktadır.</p>
-                    <br>
-                    <ul style="list-style: none;">
-                        <li><i class="fa-solid fa-check" style="color:var(--primary-blue)"></i> Sertifikalı Uzman Kadro</li>
-                        <li><i class="fa-solid fa-check" style="color:var(--primary-blue)"></i> Orijinal Yedek Parça</li>
-                        <li><i class="fa-solid fa-check" style="color:var(--primary-blue)"></i> 7/24 Teknik Destek</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="mt-10 pt-8 border-t border-gray-200 w-full">
-    <h3 class="text-center font-bold text-gray-800 mb-6 text-xl">Müşterilerimiz Bizi Öneriyor</h3>
-    
-    <div class="mt-12 pt-8 border-t border-gray-200 w-full" id="musteri-yorumlari">
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+ <section id="about" class="section py-16 bg-white">
+    <div class="custom-container max-w-6xl mx-auto px-4">
         
-        <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 h-fit">
-            <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <i class="fa-regular fa-pen-to-square text-blue-600"></i>
-                Siz de Yorum Yapın
-            </h3>
+        <div class="flex flex-col md:flex-row items-center gap-12">
             
-            <form id="miniYorumFormu" onsubmit="yorumEkleMini(event)">
-                <div class="mb-3">
-                    <input type="text" id="miniAd" required 
-                           class="w-full px-4 py-2 rounded-lg border border-blue-200 focus:outline-none focus:border-blue-500 text-sm" 
-                           placeholder="Adınız Soyadınız">
+            <div class="w-full md:w-1/2">
+                <div class="rounded-2xl overflow-hidden border-4 border-white shadow-2xl h-80 md:h-96 relative group">
+                    <img src="dükkan.jpg" alt="dükkan" class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110">
                 </div>
-
-                <div class="mb-3">
-                    <select id="miniPuan" class="w-full px-4 py-2 rounded-lg border border-blue-200 focus:outline-none focus:border-blue-500 text-sm text-gray-600">
-                        <option value="5">⭐⭐⭐⭐⭐ - Mükemmel</option>
-                        <option value="4">⭐⭐⭐⭐ - Çok İyi</option>
-                        <option value="3">⭐⭐⭐ - Orta</option>
-                        <option value="2">⭐⭐ - Geliştirilmeli</option>
-                        <option value="1">⭐ - Kötü</option>
-                    </select>
-                </div>
-
-                <div class="mb-4">
-                    <textarea id="miniMesaj" required rows="3" 
-                              class="w-full px-4 py-2 rounded-lg border border-blue-200 focus:outline-none focus:border-blue-500 text-sm" 
-                              placeholder="Deneyiminizi buraya yazın..."></textarea>
-                </div>
-
-                <button type="submit" 
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition duration-300 text-sm shadow-md">
-                    YORUMU GÖNDER
-                </button>
-            </form>
-        </div>
-
-        <div class="bg-white p-2">
-            <h3 class="text-xl font-bold text-gray-800 mb-4 px-2">Son Değerlendirmeler</h3>
-            
-            <div id="miniYorumListesi" class="space-y-4 overflow-y-auto max-h-[300px] pr-2">
-                
-                <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex gap-3">
-                    <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 font-bold text-lg flex-shrink-0">
-                        A
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center w-full">
-                            <h4 class="font-bold text-sm text-gray-900">Ahmet Yılmaz</h4>
-                            <div class="text-yellow-400 text-[10px]">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 text-xs mt-1">Hızlı servis ve güler yüzlü ekip. Teşekkürler.</p>
-                    </div>
-                </div>
-
-                 <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex gap-3">
-                    <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-500 font-bold text-lg flex-shrink-0">
-                        M
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center w-full">
-                            <h4 class="font-bold text-sm text-gray-900">Merve Demir</h4>
-                            <div class="text-yellow-400 text-[10px]">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 text-xs mt-1">Klima bakımından çok memnun kaldım.</p>
-                    </div>
-                </div>
-
             </div>
+
+            <div class="w-full md:w-1/2">
+                <h2 class="text-3xl font-bold text-blue-700 mb-6">Kuriş İklimlendirme Hakkında</h2>
+                
+                <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                    Yılların verdiği tecrübe ile sektörde güvenin adresi olan firmamız, müşteri memnuniyetini her zaman ön planda tutmaktadır. İşinizi şansa değil, ustalara bırakın.
+                </p>
+                
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                            <i class="fa-solid fa-check text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700 font-medium">Sertifikalı Uzman Kadro</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                            <i class="fa-solid fa-check text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700 font-medium">Orijinal Yedek Parça</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                            <i class="fa-solid fa-check text-blue-600"></i>
+                        </div>
+                        <span class="text-gray-700 font-medium">7/24 Teknik Destek</span>
+                    </li>
+                </ul>
+            </div>
+
         </div>
 
     </div>
-</div>
-</div>
-    </section>
+</section>
+
+<hr class="border-gray-100">
+
+<section class="py-16 bg-gray-50">
+    <div class="custom-container max-w-6xl mx-auto px-4">
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+
+            <div class="lg:col-span-1 bg-white p-6 rounded-2xl border border-gray-200 sticky top-8 shadow-sm">
+                
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Yorum Yap</h3>
+                <p class="text-sm text-gray-500 mb-6">Deneyiminizi paylaşarak bize destek olun.</p>
+
+                <form id="yanYanaForm" onsubmit="yorumEkleYanYana(event)" class="space-y-4">
+                    
+                    <div>
+                        <input type="text" id="yanAd" required class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" placeholder="Adınız Soyadınız">
+                    </div>
+
+                    <div class="relative">
+                        <select id="yanPuan" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all appearance-none cursor-pointer text-gray-600">
+                            <option value="5">⭐⭐⭐⭐⭐ - Mükemmel</option>
+                            <option value="4">⭐⭐⭐⭐ - İyi</option>
+                            <option value="3">⭐⭐⭐ - Orta</option>
+                            <option value="2">⭐⭐ - Geliştirilmeli</option>
+                            <option value="1">⭐ - Kötü</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs pointer-events-none"></i>
+                    </div>
+
+                    <div>
+                        <textarea id="yanMesaj" required rows="4" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none" placeholder="Yorumunuzu buraya yazın..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gray-900 hover:bg-black text-white font-medium py-3 rounded-lg transition-colors duration-300 text-sm flex items-center justify-center gap-2">
+                        <span>Gönder</span>
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                    </button>
+                </form>
+            </div>
+
+
+            <div class="lg:col-span-2">
+                
+                <div class="flex items-center justify-between mb-6 pb-4 border-b border-gray-200">
+                    <h3 class="text-xl font-bold text-gray-900">Son Değerlendirmeler</h3>
+                    <div class="flex items-center gap-2 text-sm text-gray-500">
+                        <i class="fa-solid fa-star text-yellow-400"></i>
+                        <span class="font-bold text-gray-900">4.9</span>
+                        <span>(128 Yorum)</span>
+                    </div>
+                </div>
+
+                <div id="yanYanaListe" class="space-y-6">
+                    
+                    <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center text-blue-600 font-bold text-sm">
+                                A
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-gray-900 text-sm">Ahmet Yılmaz</h4>
+                                    <span class="text-xs text-gray-400">2 gün önce</span>
+                                </div>
+                                <div class="text-yellow-400 text-[10px] mb-2 mt-0.5">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    "Klimamızın yıllık bakımını yaptırdık. Gelen ekip çok ilgiliydi. Tavsiye ederim."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex-shrink-0 flex items-center justify-center text-green-600 font-bold text-sm">
+                                M
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-gray-900 text-sm">Merve Demir</h4>
+                                    <span class="text-xs text-gray-400">1 hafta önce</span>
+                                </div>
+                                <div class="text-yellow-400 text-[10px] mb-2 mt-0.5">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    "Randevu saatinde küçük bir gecikme oldu ama işçilikleri gayet temiz."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <button class="text-blue-600 text-sm font-semibold hover:text-blue-800 transition">
+                        Tüm yorumları gör <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
 
   <footer id="footer" class="relative bg-gradient-to-b from-[#0b1220] to-black text-gray-300 pt-20 pb-10 overflow-hidden">
 
@@ -483,11 +506,11 @@
       </p>
 
       <div class="flex gap-4">
-        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-800 hover:bg-blue-600 transition text-white">
+        <a href="https://www.facebook.com/4mevsimiklimlendirme/?locale=pa_IN" class="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-800 hover:bg-blue-600 transition text-white">
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-800 hover:bg-pink-600 transition text-white">
+        <a href="https://www.instagram.com/kurisiklimlendirme/" class="w-10 h-10 flex items-center justify-center rounded-xl bg-gray-800 hover:bg-pink-600 transition text-white">
           <i class="fa-brands fa-instagram"></i>
         </a>
       </div>
