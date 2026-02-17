@@ -65,7 +65,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-           min-height: 80px;
+            height: 80px;
         }
 
         .logo {
@@ -103,8 +103,7 @@
             font-weight: 600;
             text-decoration: none;
         }
-
-        
+    
 
         /* Hizmetler ve Diğer Bölümler */
         .section { padding: 80px 0; }
@@ -146,26 +145,9 @@
         
         /* Mobil */
         @media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Menüyü dikey hizala */
-        gap: 15px;
-    }
-    
-    .nav-links {
-        display: flex; 
-        flex-direction: column; /* Linkleri alt alta diz */
-        width: 100%;
-        text-align: center;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .btn-header {
-        width: 100%; 
-        text-align: center;
-        margin-top: 10px;
-    }
-}
+            .nav-links { display: none; }
+        }
+        
 
         @keyframes nefes-alma {
             0% { transform: scale(1); }
@@ -191,12 +173,12 @@
     <header>
         <div class="custom-container">
             <nav>
-             <a href="#" class="logo">
-    <img src="logo.jpg" alt="Kuriş İklimlendirme" class="h-20 w-auto" style="max-height: 60px;">
+              <a href="#" class="logo">
+    <img src="logo.jpg" alt="Kuriş İklimlendirme" class="h-20 w-auto">
 </a>
     
-
-                
+</a>
+                </a>
                 <ul class="nav-links">
                     <li><a href="#">Ana Sayfa</a></li>
                    <li><a href="hizmetler.html">Hizmetler</a></li>
