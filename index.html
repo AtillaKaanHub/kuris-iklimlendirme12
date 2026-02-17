@@ -65,7 +65,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+           min-height: 80px;
         }
 
         .logo {
@@ -104,30 +104,7 @@
             text-decoration: none;
         }
 
-        /* --- MOBİL İÇİN DÜZELTME KODU --- */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column; /* Yan yana değil, alt alta diz */
-                text-align: center;
-                gap: 15px; /* Elemanlar arası boşluk */
-            }
-
-            .nav-links {
-                flex-direction: column; /* Linkleri de alt alta diz */
-                gap: 10px;
-                width: 100%;
-            }
-
-            .logo img {
-                margin-bottom: 5px; /* Logo ile linkler arasına boşluk */
-            }
-            
-            .btn-header {
-                width: 100%; /* Buton mobilde tam genişlik olsun */
-                text-align: center;
-                display: block;
-            }
-        }
+        
 
         /* Hizmetler ve Diğer Bölümler */
         .section { padding: 80px 0; }
@@ -169,9 +146,26 @@
         
         /* Mobil */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-        }
-        
+    nav {
+        flex-direction: column; /* Menüyü dikey hizala */
+        gap: 15px;
+    }
+    
+    .nav-links {
+        display: flex; 
+        flex-direction: column; /* Linkleri alt alta diz */
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .btn-header {
+        width: 100%; 
+        text-align: center;
+        margin-top: 10px;
+    }
+}
 
         @keyframes nefes-alma {
             0% { transform: scale(1); }
@@ -197,12 +191,12 @@
     <header>
         <div class="custom-container">
             <nav>
-              <a href="#" class="logo">
-    <img src="logo.jpg" alt="Kuriş İklimlendirme" class="h-20 w-auto">
+             <a href="#" class="logo">
+    <img src="logo.jpg" alt="Kuriş İklimlendirme" class="h-20 w-auto" style="max-height: 60px;">
 </a>
     
-</a>
-                </a>
+
+                
                 <ul class="nav-links">
                     <li><a href="#">Ana Sayfa</a></li>
                    <li><a href="hizmetler.html">Hizmetler</a></li>
