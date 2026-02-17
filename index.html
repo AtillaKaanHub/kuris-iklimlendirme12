@@ -104,6 +104,31 @@
             text-decoration: none;
         }
 
+        /* --- MOBİL İÇİN DÜZELTME KODU --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column; /* Yan yana değil, alt alta diz */
+                text-align: center;
+                gap: 15px; /* Elemanlar arası boşluk */
+            }
+
+            .nav-links {
+                flex-direction: column; /* Linkleri de alt alta diz */
+                gap: 10px;
+                width: 100%;
+            }
+
+            .logo img {
+                margin-bottom: 5px; /* Logo ile linkler arasına boşluk */
+            }
+            
+            .btn-header {
+                width: 100%; /* Buton mobilde tam genişlik olsun */
+                text-align: center;
+                display: block;
+            }
+        }
+
         /* Hizmetler ve Diğer Bölümler */
         .section { padding: 80px 0; }
         .section-title { text-align: center; margin-bottom: 50px; }
